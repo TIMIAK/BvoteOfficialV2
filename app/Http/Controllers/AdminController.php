@@ -119,6 +119,7 @@ class AdminController extends Controller
     public function submitResult(ResultRequest $request,$poll_id){
         $request['poll_id'] = $poll_id;
         $request['user_id'] = Auth::user()->id;
+        $request['voter'] = Auth::user()->email;
         Result::create($request->all());
         return redirect(route('poll.search'))->with('success','Your Candidate has been submitted successfully!!! ');
     }
@@ -130,6 +131,14 @@ class AdminController extends Controller
         if($polldetail == ''){
             return redirect()->back()->with('error','Unable to Find this Poll with ID '. $request->voteid);
         }
+        if($polldetail->allowedvoters){
+            $allowedvoters = $polldetail->allowedvoters;
+            $exploded_voters =  explode(',',$allowedvoters);
+
+            if(!in_array(Auth()->user()->email,$exploded_voters)){
+                return redirect()->back()->with('error','Sorry you are not allowed to participate in this Poll!!');
+            }
+        }
         $time =  time() + 60*60;
         if(date('Y-m-d') >= $polldetail->end_date){
             if(date('H:i',$time) > $polldetail->end_time){
@@ -140,6 +149,8 @@ class AdminController extends Controller
                     ['poll_id', '=' ,$vote_id],
                     ['user_id','=',Auth::user()->id],
                 ])->first();
+
+
                 if($check_eligiblilty == ''){
                     return view('admin.submit_poll',compact('polldetail'));
                 }

@@ -16,15 +16,16 @@ class CreatePollsTable extends Migration
         Schema::create('polls', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
             $table->string('voteid')->unique();
             $table->string('office');
             $table->string('candidates');
+            $table->string('allowedvoters')->nullable();
             $table->date('start_date');
             $table->date('end_date');
             $table->time('start_time');
             $table->time('end_time');
-            // $table->string('status')->default(null);
+            $table->string('TC');
             $table->timestamps();
         });
     }

@@ -31,6 +31,7 @@ class PollRequest extends FormRequest
             'end_date' => 'required|date|after_or_equal:start_date',
             'start_time' => 'required',
             'end_time' => 'required',
+            'tc' => 'required',
 
 
         ];
@@ -42,10 +43,12 @@ class PollRequest extends FormRequest
             'office.max' => "Office field can't me more that 250 characters",
             'candidates' => "Candidate field is required",
             'start_date.after' => "Start Date MUST be Today onward ",
-            'end_date:after' => "End Date MUST be after the start date",
+            'end_date.after' => "End Date MUST be after the start date",
 
             'start_time.required' => "Start Time is Required",
-            'end_time:required' => "End Time is Required",
+            'end_time.required' => "End Time is Required",
+            'tc.required' => "Agree to term and Conditions by checking the box",
+
         ];
     }
 }

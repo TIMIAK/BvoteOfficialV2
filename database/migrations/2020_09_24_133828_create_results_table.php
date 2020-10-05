@@ -17,9 +17,10 @@ class CreateResultsTable extends Migration
         Schema::create('results', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('poll_id');
-            $table->foreign('poll_id')->references('id')->on('polls');
+            $table->foreign('poll_id')->references('id')->on('polls')->cascadeOnDelete();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
+            $table->string('voter')->nullable();
             $table->string('candidate');
             $table->timestamps();
         });
