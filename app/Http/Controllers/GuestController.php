@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\DB;
 
 class GuestController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('verified');
+    }
     public function index(){
         return view('guest.home');
     }

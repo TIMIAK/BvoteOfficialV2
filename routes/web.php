@@ -29,4 +29,4 @@ Route::get('/home', 'GuestController@index')->name('home');
 Route::get('/','GuestController@index')->name('home');
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
