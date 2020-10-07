@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\contact;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +29,12 @@ Route::get('/about','GuestController@about')->name('about');
 Route::get('/services','GuestController@services')->name('services');
 Route::get('/home', 'GuestController@index')->name('home');
 Route::get('/','GuestController@index')->name('home');
+Route::get('/contact','GuestController@contact')->name('contact');
+Route::get('/contact/send','GuestController@sendcontact')->name('sendcontact');
+// Route::get('/email',function(){
+//     Mail::to('akiodetimothy2017@gmail.com')->send(new contact());
+//     return new contact;
+// });
 
 
 Auth::routes(['verify' => true]);
