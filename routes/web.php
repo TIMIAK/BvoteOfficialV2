@@ -29,12 +29,6 @@ Route::get('/about','GuestController@about')->name('about');
 Route::get('/services','GuestController@services')->name('services');
 Route::get('/home', 'GuestController@index')->name('home');
 Route::get('/','GuestController@index')->name('home');
-Route::get('/contact','GuestController@contact')->name('contact');
-Route::get('/contact/send','GuestController@sendcontact')->name('sendcontact');
-// Route::get('/email',function(){
-//     Mail::to('akiodetimothy2017@gmail.com')->send(new contact());
-//     return new contact;
-// });
-
-
+Route::get('/contact','ContactFormController@create')->name('contact');
+Route::post('/contact','ContactFormController@store');
 Auth::routes(['verify' => true]);

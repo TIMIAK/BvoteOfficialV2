@@ -28,12 +28,4 @@ class GuestController extends Controller
     public function services(){
         return view('guest.services');
     }
-    public function contact(){
-        return view('guest.contact');
-    }
-    public function sendcontact(ContactRequest $request){
-        // Mail::to('akiodetimothy2017@gmail.com')->send(new contact());
-        $contact = contact::create($request->all());
-        return redirect()->back()->with('success','Your Message has been successfully delivered!!');
-    }
 }
