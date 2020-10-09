@@ -77,7 +77,6 @@
 
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{route('admin.profile')}}">My Profile</a>
                                     <a class="dropdown-item" href="{{route('poll.index')}}">My Polls</a>
                                     <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="{{ route('logout') }}"

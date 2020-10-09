@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin/'], function () {
     Route::resource('poll', 'AdminController');
-    Route::get('','UserController@profile')->name('admin.profile');
     Route::get('view/{poll_id}/Result','AdminController@viewResult')->name('view.result');
 
     Route::get('/search','AdminController@pollSearch')->name('poll.search');
