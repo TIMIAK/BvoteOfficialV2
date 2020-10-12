@@ -31,9 +31,6 @@ class PollRequest extends FormRequest
             'end_date' => 'required|date|after_or_equal:start_date',
             'start_time' => 'required',
             'end_time' => 'required',
-            'tc' => 'required',
-
-
         ];
     }
     public function messages()
@@ -47,8 +44,6 @@ class PollRequest extends FormRequest
 
             'start_time.required' => "Start Time is Required",
             'end_time.required' => "End Time is Required",
-            'tc.required' => "Agree to term and Conditions by checking the box",
-
         ];
     }
 }

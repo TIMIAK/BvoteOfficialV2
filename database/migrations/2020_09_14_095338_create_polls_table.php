@@ -25,7 +25,6 @@ class CreatePollsTable extends Migration
             $table->date('end_date');
             $table->time('start_time');
             $table->time('end_time');
-            $table->string('TC');
             $table->timestamps();
         });
     }
