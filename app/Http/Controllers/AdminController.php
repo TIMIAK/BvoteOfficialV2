@@ -52,7 +52,7 @@ class AdminController extends Controller
      */
     public function store(PollRequest $request)
     {
-        $voteid = 'BV'.rand(100,999);
+        $voteid = 'BV'.rand(1000,9999);
         $request['voteid'] = $voteid;
         Auth()->user()->polls()->create($request->all());
 

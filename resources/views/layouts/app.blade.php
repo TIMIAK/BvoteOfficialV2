@@ -73,6 +73,17 @@
        @include('messages.flash')
        @yield('content')
       </main>
+      <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="footer-text m-0">
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Application was made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/TIMIAK" target="_blank">TimBaron</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+      </footer>
 
     <script src="{{asset('vendors/jquery/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('vendors/bootstrap/bootstrap.bundle.min.js')}}"></script>
