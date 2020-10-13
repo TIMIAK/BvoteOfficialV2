@@ -31,22 +31,22 @@
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-home"></i></span>
             <div class="media-body">
-              <h3>Lagos,Nigeria</h3>
-              <p>Anchor University Lagos</p>
+              <h3 class="text-white">Lagos,Nigeria</h3>
+              <p class="text-white">Anchor University Lagos</p>
             </div>
           </div>
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-headphone"></i></span>
             <div class="media-body">
-              <h3><a href="tel:454545654">+23481 4979 2957</a></h3>
-              <p>Mon to Fri 9am to 6pm</p>
+                <h3><a href="tel:+2348149792957" class="text-white">+23481 4979 2957</a></h3>
+              <p class="text-white">Mon to Fri 9am to 6pm</p>
             </div>
           </div>
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-email"></i></span>
             <div class="media-body">
-              <h3><a href="mailto:bvoteofficial@gmail.com">bvoteofficial01@gmail.com</a></h3>
-              <p>Send us your query anytime!</p>
+              <h3><a href="mailto:bvoteofficial@gmail.com" class="text-white">bvoteofficial01@gmail.com</a></h3>
+              <p class="text-white">Send us your query anytime!</p>
             </div>
           </div>
         </div>
@@ -56,18 +56,18 @@
             <div class="row">
               <div class="col-lg-5">
                 <div class="form-group">
-                  <input class="form-control" name="fullname" id="name" type="text" placeholder="Enter your name">
+                  <input class="form-control text-white" name="fullname" id="name" type="text" placeholder="Enter your name">
                 </div>
                 <div class="form-group">
-                  <input class="form-control" name="email" id="email" type="email" placeholder="Enter email address">
+                  <input class="form-control text-white" name="email" id="email" type="email" placeholder="Enter email address">
                 </div>
                 <div class="form-group">
-                  <input class="form-control" name="subject" id="subject" type="text" placeholder="Enter Subject">
+                  <input class="form-control text-white" name="subject" id="subject" type="text" placeholder="Enter Subject">
                 </div>
               </div>
               <div class="col-lg-7">
                 <div class="form-group">
-                    <textarea class="form-control different-control w-100" name="message" id="message" cols="30" rows="5" placeholder="Enter Message"></textarea>
+                    <textarea class="form-control different-control w-100 text-white" name="message" id="message" cols="30" rows="5" placeholder="Enter Message"></textarea>
                 </div>
               </div>
             </div>

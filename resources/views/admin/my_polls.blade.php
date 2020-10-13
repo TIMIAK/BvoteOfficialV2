@@ -4,7 +4,7 @@
     <div class="row">
         @if (count($polls) == 0)
             <div class="container">
-                <p class="text-default text-lg">
+                <p class="text-white text-lg">
                     No Poll created under this User
                 </p>
             </div>
@@ -15,7 +15,7 @@
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                     <h5 class="card-title">{{$poll->office}}</h5>
-                    <p class="card-text">
+                    <p class="card-text text-dark">
                         <?php
                         $candidates = $poll->candidates;
                         $exploded_candidates =  explode(',',$candidates);
@@ -25,20 +25,20 @@
                         <ul>
 
                         @foreach ($exploded_candidates as $exploded_candidate)
-                            <li>{{$exploded_candidate}}</li>
+                            <li class="text-dark">{{$exploded_candidate}}</li>
                         @endforeach
                         </ul>
                     </p>
                         <hr>
                         <div>
-                            <span>{{"Poll ID: ". $poll->voteid }}</span>
+                            <span class="text-dark">{{"Poll ID: ". $poll->voteid }}</span>
                         </div>
                         <div>
                             @include('admin.checkstatus')
-                            <span>{{"Status: ".$poll->status}}</span><br>
+                            <span class="text-dark">{{"Status: ".$poll->status}}</span><br>
                         </div>
                         <div>
-                            <span>Result: </span> <a href="{{route('view.result',$poll->id)}}" class="btn btn-sm btn-primary">VIEW</a>
+                            <span class="text-dark">Result: </span> <a href="{{route('view.result',$poll->id)}}" class="btn btn-sm btn-primary">VIEW</a>
                         </div>
 
                         <hr>

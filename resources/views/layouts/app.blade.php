@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
-<body>
+<body class="bg-secondary text-white">
     <header class="header_area">
         <div class="main_menu">
           <nav class="navbar navbar-expand-lg navbar-light">
