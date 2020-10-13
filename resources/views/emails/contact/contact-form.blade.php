@@ -1,5 +1,5 @@
 @component('mail::message')
-#Thank you for your message
+#New Contact Message
 
 <strong>Name:</strong>{{$data['fullname']}}<br>
 <strong>Email:</strong>{{$data['email']}}<br>
