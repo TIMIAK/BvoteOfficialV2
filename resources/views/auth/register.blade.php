@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card bg-dark">
@@ -102,6 +102,92 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+</div> --}}
+<div class="container pt-3">
+    <div class="row justify-content-center">
+        <div class="col col-md-8">
+            <div class="card mb-3" style="max-width: 700px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="{{asset('img/banner/vote5.jpg')}}" class="card-img" alt="..." style="height: 100%">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Registration Form</h5>
+                      <form action="{{route('register')}}" class="form-contact contact_form" method="post">
+                        @csrf
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="first_name">First Name</label>
+                                <input class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" type="text" placeholder="Enter your Fisrt Name" value="{{old('first_name')}}" required>
+                                @error('first_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-group col">
+                                <label for="last_name">Last Name</label>
+                                <input class="form-control @error('last_name') is-invalid @enderror " name="last_name" id="last_name" type="text" placeholder="Enter your Last Name" value="{{old('last_name')}}" required>
+                                @error('last_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="username">User Name</label>
+                                <input name="username" id="username" type="text" class="form-control @error('username') is-invalid @enderror" placeholder="Enter your User Name" value="{{old('username')}}" required>
+                                @error('username')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="email">Email Address</label>
+                                <input class="form-control @error('email') is-invalid @enderror" name="email" id="email" type="email" placeholder="Enter your Email" value="{{old('email')}}" required>
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="password">Password</label>
+                                <input  id="password" name="password" type="password" class="form-control @error('password') is-invalid @enderror"  placeholder="Enter your Password" value="{{old('password')}}" required autocomplete="new-password">
+                                {{-- <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"> --}}
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-group col">
+                                <label for="password-confirm">Confirm Password</label>
+                                <input id="password-confirm" name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password" required autocomplete="new-password">
+                                {{-- <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"> --}}
+                            </div>
+                        </div>
+                        <div class="form-group text-center text-md-right mt-3">
+                          <button type="submit" class="button button--active button-contactForm">Register</button>
+                        </div>
+                      </form>
+                      <div class="row justify-content-between">
+                          <p class="card-text"><a href="{{route('login')}}" class="btn btn-default">Already have an account?</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
 </div>

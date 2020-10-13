@@ -135,6 +135,7 @@ class AdminController extends Controller
         if($polldetail->allowedvoters){
             $allowedvoters = $polldetail->allowedvoters;
             $exploded_voters =  explode(',',$allowedvoters);
+            $exploded_voters = array_map('strtolower',$exploded_voters);
 
             if(!in_array(Auth()->user()->email,$exploded_voters)){
                 return redirect()->back()->with('error','Sorry you are not allowed to participate in this Poll!!');
