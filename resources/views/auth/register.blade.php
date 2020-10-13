@@ -182,7 +182,7 @@
                         </div>
                       </form>
                       <div class="row justify-content-between">
-                          <p class="card-text"><a href="{{route('login')}}" class="btn btn-default">Already have an account?</a></p>
+                          <p class="card-text"><a href="{{route('login')}}" class="btn btn-default">Login</a></p>
                       </div>
                     </div>
                   </div>

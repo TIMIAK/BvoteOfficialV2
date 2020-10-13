@@ -40,7 +40,7 @@
                         </div>
                       </form>
                       <div class="row justify-content-between">
-                          <p class="card-text"><a href="{{route('register')}}" class="btn btn-default">Sign Up</a></p>
+                          <p class="card-text"><a href="{{route('register')}}" class="btn btn-default">Register</a></p>
                           <p class="card-text"><a href="{{route('password.request')}}" class="btn btn-default">Forgot Password?</a></p>
                       </div>
                     </div>

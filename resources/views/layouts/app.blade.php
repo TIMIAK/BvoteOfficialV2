@@ -9,7 +9,7 @@
     <title>BVOTE</title>
 
     <!-- Styles -->
-    <link rel="icon" href="{{asset('img/Fevicon.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('img/icon.ico')}}" type="image/png">
 
     <link rel="stylesheet" href="{{asset('vendors/bootstrap/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendors/fontawesome/css/all.min.css')}}">
@@ -59,10 +59,10 @@
                   @endguest
                 </ul>
                 <ul class="nav navbar-nav navbar-right navbar-social">
-                  <li><a href="#"><i class="ti-facebook"></i></a></li>
-                  <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                  <li><a href="#"><i class="ti-instagram"></i></a></li>
-                  <li><a href="#"><i class="ti-skype"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/timothy-akiode-7b772a164/" target="_blank"><i class="ti-linkedin"></i></a></li>
+                  <li><a href="https://twitter.com/TimBaron14" target="_blank"><i class="ti-twitter-alt" ></i></a></li>
+                  <li><a href="https://www.facebook.com/timothy.akiode" target="_blank"><i class="ti-facebook" ></i></a></li>
+                  <li><a href="https://github.com/TIMIAk" target="_blank"><i class="ti-github" ></i></a></li>
                 </ul>
               </div>
             </div>
@@ -70,13 +70,15 @@
         </div>
       </header>
       <main class="site-main">
-       @include('messages.flash')
-       @yield('content')
+       <div class="container py-3">
+        @include('messages.flash')
+        @yield('content')
+       </div>
       </main>
       <footer>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <p class="footer-text m-0">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Application was made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/TIMIAK" target="_blank">TimBaron</a>
                     </p>
