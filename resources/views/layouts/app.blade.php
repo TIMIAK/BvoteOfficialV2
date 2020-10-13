@@ -48,8 +48,13 @@
                       aria-expanded="false">{{Auth::user()->username}}</a>
                     <ul class="dropdown-menu">
                     <li class="nav-item"><a class="nav-link" href="{{route('poll.index')}}">My Polls</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{route('logout')}}">Sign out</a></li>
-                    </ul>
+                    <li class="nav-item"><a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault();
+
+                        document.getElementById('logout-form').submit();">Sign out</a></li>
+                </ul>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
                   </li>
                   @endguest
                 </ul>
