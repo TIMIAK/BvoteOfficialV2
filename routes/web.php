@@ -22,6 +22,8 @@ Route::group(['prefix' => 'admin/'], function () {
     Route::get('/search','AdminController@pollSearch')->name('poll.search');
     Route::get('/submit/Search/','AdminController@submitSearch')->name('submit.search');
     Route::get('/submit/{poll_id}/result/','AdminController@submitResult')->name('submit.result');
+    Route::get('change/password','AdminController@ChangePasswordForm')->name('change.password');
+    Route::post('Password/change','AdminController@changePassword')->name('password.change');
 });
 
 Route::get('/about','GuestController@about')->name('about');

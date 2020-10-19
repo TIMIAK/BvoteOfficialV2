@@ -42,7 +42,7 @@
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-email"></i></span>
             <div class="media-body">
-              <h3><a href="mailto:bvoteofficial@gmail.com">support@colorlib.com</a></h3>
+              <h3><a href="mailto:bvoteofficial@gmail.com">bvoteofficial@gmail.com</a></h3>
               <p>Send us your query anytime!</p>
             </div>
           </div>

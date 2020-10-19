@@ -47,8 +47,9 @@
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                       aria-expanded="false">{{Auth::user()->username}}</a>
                     <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="nav-link" href="{{route('poll.index')}}">My Polls</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault();
+                        <li class="nav-item"><a class="nav-link" href="{{route('poll.index')}}">My Polls</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('change.password')}}">Change password</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault();
 
                         document.getElementById('logout-form').submit();">Sign out</a></li>
                 </ul>

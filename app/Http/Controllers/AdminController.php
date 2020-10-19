@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ChangePassword;
 use App\Http\Requests\PollRequest;
 use App\Http\Requests\PollSearchRequest;
 use App\Http\Requests\ResultRequest;
@@ -10,6 +11,7 @@ use App\Result;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -57,6 +59,20 @@ class AdminController extends Controller
         Auth()->user()->polls()->create($request->all());
 
         return redirect(route('poll.index'))->with('success','Poll created successfully');
+    }
+    public function ChangePasswordForm(){
+        return view('admin.Change_password');
+    }
+    public function ChangePassword(ChangePassword $request){
+        // return bcrypt($request->password) .  "And"  . Auth::user()->password;
+        if(!Hash::check($request->OldPassword,Auth::user()->password)){
+            return redirect()->back()->with('error','Old Password is Incorrect');
+        }
+        else{
+            Auth::user()->update(['password' => Hash::make($request->password)]);
+            return redirect()->back()->with('success','Password changed successfully!!');
+
+        }
     }
 
     /**
