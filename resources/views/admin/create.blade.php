@@ -22,7 +22,7 @@
         <div class="row">
             <div class="form-group col-12">
                 <label for="allowedvoters"><h4 class="text-white">Email of Allowed Voters: </h4><span>If more than one seperate with a Coma " , "</span></label>
-                <textarea class="form-control text-white" name="allowedvoters" id="allowedvoters" type="text" placeholder="E.g example1@gmail.com,example2@gmail.com"></textarea>
+                <textarea class="form-control text-white" name="allowedvoters" id="allowedvoters" type="text" placeholder="E.g example1@gmail.com,example2@gmail.com" multiple></textarea>
             </div>
         </div>
         <div class="row">
